@@ -1,5 +1,5 @@
 # Taiga CLI.
-Uses a mixture of Ruby and Bash to interact with the [Taiga API](https://taigaio.github.io/taiga-doc/dist/api.html)
+Uses a mixture of Ruby and Bash to interact with the [Taiga API](https://taigaio.github.io/taiga-doc/dist/api.html).
 
 Just basic indexing is all I got so far. 
 
@@ -16,7 +16,7 @@ $ tg <task|tasks>
 ```
 
 ## Setup
-You'll need to make sure the aliases (`aliases.zsh`) are set. 
+You'll need to make sure the aliases (`./aliases.zsh`) are set. 
 
 You'll also need to set some environment variables. 
 ```bash
