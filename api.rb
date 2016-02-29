@@ -14,7 +14,7 @@ class Userstory < Taiga
 			us_id_json = %x(curl -X GET \
 			  -H "Content-Type: application/json" \
 			  -H "Authorization: Bearer ${TAIGA_AUTH_TOKEN}" \
-			  https://api.taiga.io/api/v1/resolver?project="${TAIGA_PROJECT_RS}"\\&us=#{ref} 2>/dev/null)
+			  https://api.taiga.io/api/v1/resolver?project="${TAIGA_PROJECT_SLUG}"\\&us=#{ref} 2>/dev/null)
 
 			us_id_parsed = JSON.parse us_id_json
 			# puts us_id_parsed["project"] # test
@@ -49,7 +49,7 @@ class Userstory < Taiga
 			us_list.each do |us|
 				puts "#{us['ref']}: (#{us['status_extra_info']['name']}) #{us['subject']}"
 			end
-			
+
 	end
 
 end
