@@ -1,5 +1,5 @@
 # Taiga CLI.
-Uses a mixture of Ruby and Bash.
+Uses a mixture of Ruby and Bash to interact with the [Taiga API](https://taigaio.github.io/taiga-doc/dist/api.html)
 
 Just basic indexing is all I got so far. 
 
