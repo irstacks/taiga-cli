@@ -42,15 +42,18 @@ OptionParser.new do |opts|
 end.parse!
 
 # Resource is first argument.
-resource = ARGV[0]
+
+resource = !ARGV[0].nil? ? ARGV[0] : 'us'
 
 # Make sure we're authenticated. 
 if Taiga::Auth.check_auth
 	
 	case resource
 	when "task","tasks"
+    puts " ** Tasks -"
 		Task.index(options[:ref],	options[:exclude_closed]) if options[:list]
 	when "us","userstory","userstories"
+    puts " ** Userstories -"
 		Userstory.index(options[:exclude_closed])
 	end
 
